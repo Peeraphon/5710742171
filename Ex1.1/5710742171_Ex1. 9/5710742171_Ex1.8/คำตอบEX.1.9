@@ -1,0 +1,60 @@
+       
+         จงพิจาราณาว่าคำสั่งต่อไปนี้ ถูกต้องหรือผิดเพราะเหตุใด จากนั้นเขียนโปรแกรมเพื่อยืนยัน
+a.	printf("%-10d\n", 10000);
+ผิด เพราะ ไม่ได้สั่งรับค่าและเก็บค่ามาก่อนแต่ที่แสดง 
+#include <stdio.h>
+
+int main()
+{
+    int A;
+    scanf("%-10d",&A);
+    printf("%-10d\n", 10000);
+    return 0;
+}
+
+b.	printf("%c\n", "This is a string");
+ ผิด เพราะ ต้องใช้ %s
+#include <stdio.h>
+
+int main()
+{
+    printf("%s\n", "This is a string");
+    return 0;
+}
+c.	printf("%*.*lf\n", 8, 3, 1024.987654);
+ถูก เพราะรันได้
+#include <stdio.h>
+
+int main()
+{
+    printf("%*.*lf \n", 8, 3, 1024.987654);
+    return 0;
+}
+d.	printf("% ld\n%+ld\n", 1000000, 1000000);
+ถูกเพราะรันได้
+#include <stdio.h>
+
+int main()
+{
+    printf("% ld%\n+ld\n", 1000000, 1000000);
+    return 0;
+}
+e.	printf("%10.2E\n", 444.93738);
+รันได้
+#include <stdio.h>
+
+int main()
+{
+   printf("%10.2E\n", 444.93738);
+    return 0;
+}
+f.	printf("%d\n", 10.987);
+ผิดเพราะต้องใช้%f
+#include <stdio.h>
+
+int main()
+{
+   printf("%d\n", 10.987);
+    return 0;
+}
+
